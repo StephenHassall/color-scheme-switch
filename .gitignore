@@ -1,0 +1,10 @@
+node_modules/
+
+# Local Netlify folder
+.netlify
+
+# Window Files
+Thumbs.db
+
+# Netlifty Files (these are private)
+netlify.toml

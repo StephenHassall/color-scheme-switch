@@ -1,0 +1,36 @@
+/**
+ * Global CSS
+ *
+ * Every HTML page will use this file. Make sure you include everything required for them all.
+ * But, do try to limit what is put in here.
+ */
+
+/* Import extra CSS files from other files */
+@import "color-scheme.css";
+
+/* Set the main font used through the site */
+html {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+/* This is used to hide the inner parts of web components until they are loaded */
+*:not(:defined) {
+  display: none;
+}
+
+/* Set color themes */
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}

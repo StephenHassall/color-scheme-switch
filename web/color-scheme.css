@@ -1,0 +1,57 @@
+/** 
+ * Color Scheme CSS
+ *
+ * Set the main color variables that are used throughout the site. There will the following parts
+ *   --light-color-xxx
+ *   --dark-color-xxx
+ *   
+ * These are then converted into the follow depending if light or dark modes are used
+ *    --color-xxx
+ */
+
+:root {
+  /* Allow light and dark modes */
+  color-scheme: light dark;
+
+  /* Light mode color variables */
+  --light-color-background: rgb(248 248 248);
+  --light-color-text: rgb(48 48 48);
+
+  /* Dark mode color variables */
+  --dark-color-background: rgb(48 48 48);
+  --dark-color-text: rgb(248 248 248);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Set light mode colors */
+    --color-background: var(--light-color-background);
+    --color-text: var(--light-color-text);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Set dark mode colors */
+    --color-background: var(--dark-color-background);
+    --color-text: var(--dark-color-text);
+  }
+}
+
+body[color-scheme="light"] {
+  /* Set light mode for all controls */
+  color-scheme: light;
+
+  /* Set light mode colors */
+  --color-background: var(--light-color-background);
+  --color-text: var(--light-color-text);
+}
+
+body[color-scheme="dark"] {
+  /* Set dark mode for all controls */
+  color-scheme: dark;
+
+  /* Set dark mode colors */
+  --color-background: var(--dark-color-background);
+  --color-text: var(--dark-color-text);
+}
