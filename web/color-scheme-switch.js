@@ -64,10 +64,14 @@ class ColorSchemeSwitch extends HTMLElement {
             button {
                 position: absolute;
                 inset: 0;
-                padding: 0;
+                width: 100%;
+                height: 100%;
+                display: grid;
+                justify-items: center;
+                align-items: center;
                 margin: 0;
                 cursor: pointer;
-                border: none;
+                border: 0;
                 border-radius: 50%;
                 -webkit-tap-highlight-color: transparent;
             }
@@ -90,9 +94,8 @@ class ColorSchemeSwitch extends HTMLElement {
 
             svg {
                 position: absolute;
-                inset: 20%;
-                width: 60%;
-                height: 60%;
+                box-sizing: border-box;
+                padding: 15%;                
                 stroke-width: 1px;
                 stroke-opacity: 1;
                 stroke-linecap: round;
